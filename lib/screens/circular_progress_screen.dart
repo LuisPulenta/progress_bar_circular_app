@@ -19,9 +19,10 @@ class _CircularProgressScreenState extends State<CircularProgressScreen>
   //------------------- initState -----------------------
   @override
   void initState() {
+    super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 1500),
+      duration: const Duration(milliseconds: 1500),
     );
 
     controller.addListener(() {
@@ -32,6 +33,7 @@ class _CircularProgressScreenState extends State<CircularProgressScreen>
 
   @override
   void dispose() {
+    super.dispose();
     controller.dispose();
   }
 
@@ -41,7 +43,7 @@ class _CircularProgressScreenState extends State<CircularProgressScreen>
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           width: 300,
           height: 300,
           child: CustomPaint(
@@ -51,7 +53,7 @@ class _CircularProgressScreenState extends State<CircularProgressScreen>
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
-        child: Icon(
+        child: const Icon(
           Icons.refresh,
         ),
         onPressed: () {
@@ -71,7 +73,7 @@ class _CircularProgressScreenState extends State<CircularProgressScreen>
 
 //----------------- _MiRadialProgress ----------------------
 class _MiRadialProgress extends CustomPainter {
-  final porcentaje;
+  final double porcentaje;
 
   _MiRadialProgress(this.porcentaje);
 

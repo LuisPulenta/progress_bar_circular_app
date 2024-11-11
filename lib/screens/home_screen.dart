@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 //-------------------- _CustomRadialProgress ------------------
 class _CustomRadialProgress extends StatelessWidget {
-  final color;
+  final Color color;
 
   const _CustomRadialProgress({
     Key? key,
@@ -84,7 +84,7 @@ class _CustomRadialProgress extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 160,
       height: 160,
       child: Center(
